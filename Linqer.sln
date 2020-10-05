@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linqer", "Linqer\Linqer.csproj", "{8D7DAA6D-6DBD-4512-903F-AD2084111276}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D7DAA6D-6DBD-4512-903F-AD2084111276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7DAA6D-6DBD-4512-903F-AD2084111276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7DAA6D-6DBD-4512-903F-AD2084111276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7DAA6D-6DBD-4512-903F-AD2084111276}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0E34450-9BE3-4485-BF7C-5B85CE2DD54C}
+	EndGlobalSection
+EndGlobal
