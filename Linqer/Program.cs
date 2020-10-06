@@ -6,7 +6,12 @@ namespace Linqer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var whereClause = new WhereClause();
+            whereClause.WhereFirstOverloadByQuerySyntax();
+            whereClause.WhereFirstOverloadByMethodSyntax();
+            // with index
+            whereClause.WhereSecondOverloadByMethodSyntax();
+
         }
     }
 }
