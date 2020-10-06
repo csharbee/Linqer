@@ -9,9 +9,10 @@ namespace Linqer
             var whereClause = new WhereClause();
             whereClause.WhereFirstOverloadByQuerySyntax();
             whereClause.WhereFirstOverloadByMethodSyntax();
-            // with index
             whereClause.WhereSecondOverloadByMethodSyntax();
 
+            var ofTypeClause = new OfTypeClause();
+            ofTypeClause.OfTypeMethodByQuerySyntax();
         }
     }
 }
