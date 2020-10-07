@@ -14,7 +14,7 @@ namespace Linqer
             _dataProvider = new DataProvider();
         }
 
-        public void WhereFirstOverloadByQuerySyntax()
+        public void WhereFirstOverloadInQuerySyntax()
         {
             var employees = from em in _dataProvider.GenerateEmployee()
                             where em.Salary > 3000
@@ -29,7 +29,7 @@ namespace Linqer
         /// <summary>
         /// public static IEnumerable<TSource> Where<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate);
         /// </summary>
-        public void WhereFirstOverloadByMethodSyntax()
+        public void WhereFirstOverloadInMethodSyntax()
         {
             var employees = _dataProvider.GenerateEmployee().Where(m => m.Salary > 3000);
 
@@ -43,7 +43,7 @@ namespace Linqer
         ///  public static IEnumerable<TSource> Where<TSource>(this IEnumerable<TSource> source, Func<TSource, int, bool> predicate);
         ///  Return Even Index Items
         /// </summary>
-        public void WhereSecondOverloadByMethodSyntax()
+        public void WhereSecondOverloadInMethodSyntax()
         {
             // i index, m object
             var employees = _dataProvider.GenerateEmployee().Where((m, i) =>

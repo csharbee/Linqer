@@ -18,7 +18,7 @@ namespace Linqer
             MixedArray.Add(new Employee() { Id = 100, Name = "Krech", EmployeeTypeId = 1, Salary = 3445 });
             MixedArray.Add(1.3);
         }
-        public void OfTypeMethodByQuerySyntax()
+        public void OfTypeMethodInQuerySyntax()
         {
             var empleyeesInMixedArray = from em in MixedArray.OfType<Employee>()
                                         select em;
