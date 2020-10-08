@@ -8,13 +8,12 @@ namespace Linqer
         static void Main(string[] args)
         {
             // Where and OfType methods are filter methods.
-            var whereClause = new WhereClause();
-            whereClause.WhereFirstOverloadInQuerySyntax();    // 1- Where filter in query syntax  
-            whereClause.WhereFirstOverloadInMethodSyntax();   // 2- Where filter in method (lambda) syntax
-            whereClause.WhereSecondOverloadInMethodSyntax();  // 3- Another overload where filter method (using index) in method syntax
+            var filterClause = new FilteringClauses();
+            filterClause.WhereFirstOverloadInQuerySyntax();    // 1- Where filter in query syntax  
+            filterClause.WhereFirstOverloadInMethodSyntax();   // 2- Where filter in method (lambda) syntax
+            filterClause.WhereSecondOverloadInMethodSyntax();  // 3- Another overload where filter method (using index) in method syntax
 
-            var ofTypeClause = new OfTypeClause();
-            ofTypeClause.OfTypeMethodInQuerySyntax();         // 4- OfType is a filter method which filter specific type in mixed type collection 
+            filterClause.OfTypeMethodInQuerySyntax();         // 4- OfType is a filter method which filter specific type in mixed type collection 
 
             //// Sorting Methods
             var sortingClause = new SortingClauses();
