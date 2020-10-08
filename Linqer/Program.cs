@@ -7,7 +7,7 @@ namespace Linqer
     {
         static void Main(string[] args)
         {
-            // Where and OfType methods are filter methods.
+            //// Filtering Methods
             var filterClause = new FilteringClauses();
             filterClause.WhereFirstOverloadInQuerySyntax();    // 1- Where filter in query syntax  
             filterClause.WhereFirstOverloadInMethodSyntax();   // 2- Where filter in method (lambda) syntax
@@ -24,8 +24,12 @@ namespace Linqer
             sortingClause.ThenByInMethodSynax();              // 9-  Multiple ordering collection in method syntax
             sortingClause.ThenByDescendingInMethodSynax();    // 10- ThenByDescending method allows you to multiple descending ordering collection
 
+            //// Grouping Methods
             var groupByClauses = new GroupingClauses();
-            groupByClauses.GroupByInQuerySyntax();
+            groupByClauses.GroupByInQuerySyntax();            // 11- Group By collection according to a property, Then returns grouping collection
+            groupByClauses.GroupByInMethodSyntax();           // 12- Similar to 11. Using method syntax
+            groupByClauses.ToLookupInMethodSyntax();          // 13- ToLookup is the same as GroupBy; the only difference is GroupBy execution is deferred, whereas ToLookup execution is immediate.
+
         }
     }
 }
