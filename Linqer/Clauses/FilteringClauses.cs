@@ -9,12 +9,13 @@ namespace Linqer.Clauses
 {
     public class FilteringClauses
     {
-        private DataProvider _dataProvider { get; set; }
+        private List<Employee> Employees { get; set; }
         private ArrayList MixedArray { get; set; }
 
         public FilteringClauses()
         {
-            _dataProvider = new DataProvider();
+            var provider = new DataProvider();
+            Employees = provider.GenerateEmployee();
 
             MixedArray = new ArrayList();
             MixedArray.Add(1);
@@ -24,7 +25,7 @@ namespace Linqer.Clauses
         }
         public void WhereFirstOverloadInQuerySyntax()
         {
-            var employees = from em in _dataProvider.GenerateEmployee()
+            var employees = from em in Employees
                             where em.Salary > 3000
                             select em;
 
@@ -39,7 +40,7 @@ namespace Linqer.Clauses
         /// </summary>
         public void WhereFirstOverloadInMethodSyntax()
         {
-            var employees = _dataProvider.GenerateEmployee().Where(m => m.Salary > 3000);
+            var employees = Employees.Where(m => m.Salary > 3000);
 
             foreach (var employee in employees)
             {
@@ -54,7 +55,7 @@ namespace Linqer.Clauses
         public void WhereSecondOverloadInMethodSyntax()
         {
             // i index, m object
-            var employees = _dataProvider.GenerateEmployee().Where((m, i) =>
+            var employees = Employees.Where((m, i) =>
             {
                 if (i % 2 == 0)
                 {

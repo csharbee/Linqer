@@ -8,7 +8,7 @@ namespace Linqer.Clauses
     public class JoiningClauses
     {
         private List<Employee> Employees { get; set; }
-        public List<EmployeeType> EmployeeTypes { get; set; }
+        private List<EmployeeType> EmployeeTypes { get; set; }
 
         public JoiningClauses()
         {

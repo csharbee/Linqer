@@ -8,14 +8,16 @@ namespace Linqer.Clauses
 {
     public class SortingClauses
     {
-        private DataProvider _dataProvider { get; set; }
+        private List<Employee> Employees { get; set; }
+
         public SortingClauses()
         {
-            _dataProvider = new DataProvider();
+            var provider = new DataProvider();
+            Employees = provider.GenerateEmployee();
         }
         public void OrderByInQuerySynax()
         {
-            var employeesInOrder = from em in _dataProvider.GenerateEmployee()
+            var employeesInOrder = from em in Employees
                                    orderby em.Salary
                                    select em;
             foreach (var employee in employeesInOrder)
@@ -25,7 +27,7 @@ namespace Linqer.Clauses
         }
         public void OrderByInMethodSynax()
         {
-            var employeesInOrder = _dataProvider.GenerateEmployee().OrderBy(m=>m.Salary);
+            var employeesInOrder = Employees.OrderBy(m => m.Salary);
 
             foreach (var employee in employeesInOrder)
             {
@@ -34,7 +36,7 @@ namespace Linqer.Clauses
         }
         public void OrderByDescendingInQuerySynax()
         {
-            var employeesInOrder = from em in _dataProvider.GenerateEmployee()
+            var employeesInOrder = from em in Employees
                                    orderby em.Salary descending
                                    select em;
             foreach (var employee in employeesInOrder)
@@ -44,7 +46,7 @@ namespace Linqer.Clauses
         }
         public void OrderByDescendingInMethodSynax()
         {
-            var employeesInOrder = _dataProvider.GenerateEmployee().OrderByDescending(m => m.Salary);
+            var employeesInOrder = Employees.OrderByDescending(m => m.Salary);
 
             foreach (var employee in employeesInOrder)
             {
@@ -56,8 +58,8 @@ namespace Linqer.Clauses
         /// </summary>
         public void ThenByInMethodSynax()
         {
-            var employeesInOrder = _dataProvider.GenerateEmployee().OrderBy(m => m.Salary).ThenBy(m=>m.Name);
-            
+            var employeesInOrder = Employees.OrderBy(m => m.Salary).ThenBy(m => m.Name);
+
             foreach (var employee in employeesInOrder)
             {
                 Console.WriteLine("Employee Name: {0}, Salary: {1}", employee.Name, employee.Salary);
@@ -65,7 +67,7 @@ namespace Linqer.Clauses
         }
         public void ThenByDescendingInMethodSynax()
         {
-            var employeesInOrder = _dataProvider.GenerateEmployee().OrderBy(m => m.Salary).ThenByDescending(m=>m.Name);
+            var employeesInOrder = Employees.OrderBy(m => m.Salary).ThenByDescending(m => m.Name);
 
             foreach (var employee in employeesInOrder)
             {

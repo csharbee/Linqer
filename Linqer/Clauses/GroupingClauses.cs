@@ -8,14 +8,16 @@ namespace Linqer.Clauses
 {
     public class GroupingClauses
     {
-        private DataProvider provider { get; set; }
+        private List<Employee> Employees { get; set; }
+
         public GroupingClauses()
         {
-            provider = new DataProvider();
+            var provider = new DataProvider();
+            Employees = provider.GenerateEmployee();
         }
         public void GroupByInQuerySyntax()
         {
-            var groups = from em in provider.GenerateEmployee()
+            var groups = from em in Employees
                          group em by em.EmployeeTypeId; // Groping by EmployeeTypeId
             foreach (var group in groups)
             {
@@ -30,7 +32,7 @@ namespace Linqer.Clauses
         }
         public void GroupByInMethodSyntax()
         {
-            var groups = provider.GenerateEmployee().GroupBy(m => m.EmployeeTypeId); // Groping by EmployeeTypeId
+            var groups = Employees.GroupBy(m => m.EmployeeTypeId); // Groping by EmployeeTypeId
 
             foreach (var group in groups)
             {
@@ -47,7 +49,7 @@ namespace Linqer.Clauses
         // ToLookup is the same as GroupBy; the only difference is GroupBy execution is deferred, whereas ToLookup execution is immediate.
         public void ToLookupInMethodSyntax()
         {
-            var groups = provider.GenerateEmployee().ToLookup(m => m.EmployeeTypeId); // Groping by EmployeeTypeId
+            var groups = Employees.ToLookup(m => m.EmployeeTypeId); // Groping by EmployeeTypeId
 
             foreach (var group in groups)
             {
