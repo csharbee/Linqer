@@ -13,6 +13,7 @@ namespace Linqer.Clauses
         private readonly List<Employee> Employees;
         private static int MinimumWage => 100;
         private static int MaxSalary => 7500;
+        private static int FixedSalary => 3000;
 
         public QuantifierClauses()
         {
@@ -26,6 +27,15 @@ namespace Linqer.Clauses
                 Console.WriteLine("All Employees' Salary are greater than minimum wage!");
             else
                 Console.WriteLine("All Employees' Salary are not greater than minimum wage!");
+        }
+        public void ContainsMethod()
+        {
+            var hasFixSalary = Employees.Select(m => m.Salary).Contains(FixedSalary); // First select salary list and then control fixed salary has in salary list or not
+            if (hasFixSalary)
+                Console.WriteLine("There is fixed salary in salary list!");
+            else
+                Console.WriteLine("There is not fixed salay in salary list!");
+
         }
         public void AnyMethod()
         {
