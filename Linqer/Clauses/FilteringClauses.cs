@@ -9,7 +9,7 @@ namespace Linqer.Clauses
 {
     public class FilteringClauses
     {
-        private List<Employee> Employees { get; set; }
+        private readonly List<Employee> Employees;
         private ArrayList MixedArray { get; set; }
 
         public FilteringClauses()

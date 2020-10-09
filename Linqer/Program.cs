@@ -30,10 +30,16 @@ namespace Linqer
             groupByClauses.GroupByInMethodSyntax();           // 12- Similar to 11. Using method syntax
             groupByClauses.ToLookupInMethodSyntax();          // 13- ToLookup is the same as GroupBy; the only difference is GroupBy execution is deferred, whereas ToLookup execution is immediate.
 
-            //// Joininh Methods
+            //// Joining Methods
             var joiningClause = new JoiningClauses();
-            joiningClause.JoinInQuerySyntax();
-            joiningClause.JoinInMethodSyntax();
+            joiningClause.JoinInQuerySyntax();               // 14- Join two collections according to same property and select new joined collection by query syntax
+            joiningClause.JoinInMethodSyntax();              // 15- Join two collections according to same property and select new joined collection by method syntax
+
+            //// Selection Methods
+            var selectionClause = new SelectionClauses();
+            selectionClause.SelectAnonymousTypeInQuerySyntax();
+            selectionClause.SelectAnonymousTypeInMethodSyntax();
+            selectionClause.SelectCollectionTypeInMethodSyntax();
         }
     }
 }

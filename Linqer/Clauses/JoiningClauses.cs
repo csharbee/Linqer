@@ -7,8 +7,8 @@ namespace Linqer.Clauses
 {
     public class JoiningClauses
     {
-        private List<Employee> Employees { get; set; }
-        private List<EmployeeType> EmployeeTypes { get; set; }
+        private readonly List<Employee> Employees;
+        private readonly List<EmployeeType> EmployeeTypes;
 
         public JoiningClauses()
         {
@@ -34,9 +34,9 @@ namespace Linqer.Clauses
                                         em => em.EmployeeTypeId, // outerKeySelector
                                         et => et.Id,             // innerKeySelector
                                         (employee, employeeDetail) => new // resultSelector
-                                        { 
-                                            Name = employee.Name, 
-                                            EmployeeTypeName = employeeDetail.Name 
+                                        {
+                                            Name = employee.Name,
+                                            EmployeeTypeName = employeeDetail.Name
                                         }
                                     );
             foreach (var employee in employeesDetail)

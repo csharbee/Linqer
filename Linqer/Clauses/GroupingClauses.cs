@@ -8,7 +8,7 @@ namespace Linqer.Clauses
 {
     public class GroupingClauses
     {
-        private List<Employee> Employees { get; set; }
+        private readonly List<Employee> Employees;
 
         public GroupingClauses()
         {
