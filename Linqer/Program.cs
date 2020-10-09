@@ -7,7 +7,7 @@ namespace Linqer
     {
         static void Main(string[] args)
         {
-            //// Filtering Methods
+            // Filtering Methods
             var filterClause = new FilteringClauses();
             filterClause.WhereFirstOverloadInQuerySyntax();    // 1- Where filter in query syntax  
             filterClause.WhereFirstOverloadInMethodSyntax();   // 2- Where filter in method (lambda) syntax
@@ -30,6 +30,10 @@ namespace Linqer
             groupByClauses.GroupByInMethodSyntax();           // 12- Similar to 11. Using method syntax
             groupByClauses.ToLookupInMethodSyntax();          // 13- ToLookup is the same as GroupBy; the only difference is GroupBy execution is deferred, whereas ToLookup execution is immediate.
 
+            //// Joininh Methods
+            var joiningClause = new JoiningClauses();
+            joiningClause.JoinInQuerySyntax();
+            joiningClause.JoinInMethodSyntax();
         }
     }
 }
