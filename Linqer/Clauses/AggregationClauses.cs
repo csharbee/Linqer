@@ -19,11 +19,11 @@ namespace Linqer.Clauses
         /// </summary>
         public void AggregateMethod()
         {
-            IList<String> strList = new List<String>() { "One", "Two", "Three", "Four", "Five" };
 
-            var commaSeperatedString = strList.Aggregate((s1, s2) => s1 + ", " + s2);
+            var commaSeperatedEmployeeNames = Employees.Aggregate<Employee, string, string>("Employee Names: ", (str, em) => str += em.Name + ",",
+                                                                                                                    str => str.Substring(0, str.Length - 1));  // s1 = s1+s2;
 
-            Console.WriteLine(commaSeperatedString); 
+            Console.WriteLine(commaSeperatedEmployeeNames);
         }
     }
 }
