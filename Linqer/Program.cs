@@ -51,7 +51,10 @@ namespace Linqer
             var aggreageClause = new AggregationClauses();
             aggreageClause.AggregateMethod();                   // 22- Performs a custom aggregation operation on the values in the collection. 
             aggreageClause.CountMethod();                       // 23- Counts the elements in a collection.
-            aggreageClause.AverageMethod();                     // 24- Average method performs average of integer values in collection.
+            aggreageClause.AverageMethod();                     // 24- Average method performs average of integer values in the collection.
+            aggreageClause.MaxMethod();                         // 25- Max method with integer value
+            aggreageClause.MaxMethodWithCollection();           // 26- Max method with a collection object that in IComparable implemented collection
+            aggreageClause.SumMethod();                         // 27- Calculate the sum of selected numerical value in the collection
         }
     }
 }

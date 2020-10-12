@@ -24,5 +24,15 @@ namespace Linqer.Data
             list.Add(new EmployeeType() { Id = 3, Name = "Software Architecture" });
             return list;
         }
+        public List<EmployeeComparable> GenerateEmployeesComparable()
+        {
+            var list = new List<EmployeeComparable>();
+            list.Add(new EmployeeComparable() { Id = 1, Name = "Huseyin", LastName = "Simsek", EmployeeTypeId = 1, Salary = 8000 }); // index : 0
+            list.Add(new EmployeeComparable() { Id = 2, Name = "John", LastName = "Doe", EmployeeTypeId = 2, Salary = 2000 });
+            list.Add(new EmployeeComparable() { Id = 3, Name = "Marry", LastName = "Carter", EmployeeTypeId = 3, Salary = 3500 });
+            list.Add(new EmployeeComparable() { Id = 4, Name = "Taylor", LastName = "Smith", EmployeeTypeId = 1, Salary = 4000 });
+            list.Add(new EmployeeComparable() { Id = 4, Name = "Joe", LastName = "Smith", EmployeeTypeId = 1, Salary = 4000 }); // added multiple sorting example. You can see difference in sorting clauses
+            return list;
+        }
     }
 }
