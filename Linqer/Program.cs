@@ -49,8 +49,8 @@ namespace Linqer
 
             //// Aggregate Methods
             var aggreageClause = new AggregationClauses();
-            aggreageClause.AggregateMethod();
-
+            aggreageClause.AggregateMethod();                   // 22- Performs a custom aggregation operation on the values in the collection. 
+            aggreageClause.CountMethod();                       // 23- Counts the elements in a collection.
         }
     }
 }

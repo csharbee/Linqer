@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Linqer.Clauses
 {
@@ -19,11 +18,20 @@ namespace Linqer.Clauses
         /// </summary>
         public void AggregateMethod()
         {
-
-            var commaSeperatedEmployeeNames = Employees.Aggregate<Employee, string, string>("Employee Names: ", (str, em) => str += em.Name + ",",
-                                                                                                                    str => str.Substring(0, str.Length - 1));  // s1 = s1+s2;
+            var commaSeperatedEmployeeNames = Employees.Aggregate<Employee, string, string>
+                                                ("Employee Names: ", (str, em) => str += em.Name + ",",
+                                                                     str => str.Substring(0, str.Length - 1));
 
             Console.WriteLine(commaSeperatedEmployeeNames);
         }
+
+        public void CountMethod()
+        {
+            var employeeCount = Employees.Count();
+            Console.WriteLine("Employee Count: {0}", employeeCount);
+            var employeeeCountGreaterThanThreeThousandSalary = Employees.Count(m => m.Salary > 3000);
+            Console.WriteLine("Employee Count Greater Than $ 3000 : {0}", employeeeCountGreaterThanThreeThousandSalary);
+        }
+
     }
 }
