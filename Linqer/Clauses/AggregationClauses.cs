@@ -32,6 +32,10 @@ namespace Linqer.Clauses
             var employeeeCountGreaterThanThreeThousandSalary = Employees.Count(m => m.Salary > 3000);
             Console.WriteLine("Employee Count Greater Than $ 3000 : {0}", employeeeCountGreaterThanThreeThousandSalary);
         }
-
+        public void AverageMethod()
+        {
+            var avgSalary = Employees.Average(m => m.Salary);
+            Console.WriteLine("Average Employees' Salary: {0}", avgSalary);
+        }
     }
 }
