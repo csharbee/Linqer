@@ -27,5 +27,10 @@ namespace Linqer.Clauses
                 Console.WriteLine("Employee: {0}", employee.Name);
             }
         }
+        public void FirstMethod()
+        {
+            var employee = Employees.First(m => m.Salary > 3000); // return first item in collection that satisfies the condition. If there is not any item, you will encounter run time error. 
+            Console.WriteLine("Employee Name: {0}", employee.Name);
+        }
     }
 }
