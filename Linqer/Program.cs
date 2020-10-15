@@ -7,6 +7,8 @@ namespace Linqer
     {
         static void Main(string[] args)
         {
+            // Tutorial Resource : https://www.tutorialsteacher.com/linq/linq-tutorials 
+
             // Filtering Methods
             var filterClause = new FilteringClauses();
             filterClause.WhereFirstOverloadInQuerySyntax();    // 1- Where filter in query syntax  
@@ -60,6 +62,7 @@ namespace Linqer
             elementOprClause.ElementAtMethod();                 // 28- Returns the element at a specified index in a collection
             elementOprClause.ElementOrDefaultAtMethod();        // 29- Returns the element at a specified index in a collection or a default value if the index is out of range.
             elementOprClause.FirstMethod();                     // 30- Returns the first element of a collection, or the first element that satisfies a condition.
+            elementOprClause.FirstOrDefaultMethod();            // 31- Returns the first element of a collection, or the first element that satisfies a condition. Returns a default value if index is out of range. 
         }
     }
 }

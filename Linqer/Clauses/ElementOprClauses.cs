@@ -32,5 +32,13 @@ namespace Linqer.Clauses
             var employee = Employees.First(m => m.Salary > 3000); // return first item in collection that satisfies the condition. If there is not any item, you will encounter run time error. 
             Console.WriteLine("Employee Name: {0}", employee.Name);
         }
+        public void FirstOrDefaultMethod()
+        {
+            var employee = Employees.FirstOrDefault(m => m.Salary > 3000); // return first item in collection that satisfies the collection or if there is not any item return null
+            if (employee != null) // Note that check employee is null or not 
+            {
+                Console.WriteLine("Employee Name: {0}", employee.Name);
+            }
+        }
     }
 }
