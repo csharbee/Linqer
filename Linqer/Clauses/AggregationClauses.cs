@@ -31,7 +31,7 @@ namespace Linqer.Clauses
         public void CountMethod()
         {
             var employeeCount = Employees.Count();
-            Console.WriteLine("Employee Count: {0}", employeeCount);
+            Console.WriteLine($"Employee Count: {employeeCount}");
 
             var employeeeCountGreaterThanThreeThousandSalary = Employees.Count(m => m.Salary > 3000);
             Console.WriteLine("Employee Count Greater Than $ 3000 : {0}", employeeeCountGreaterThanThreeThousandSalary);
@@ -39,12 +39,12 @@ namespace Linqer.Clauses
         public void AverageMethod()
         {
             var avgSalary = Employees.Average(m => m.Salary);
-            Console.WriteLine("Average Employees' Salary: {0}", avgSalary);
+            Console.WriteLine($"Average Employees' Salary: {avgSalary}");
         }
         public void MaxMethod()
         {
             var maxSalary = Employees.Max(m => m.Salary);
-            Console.WriteLine("Maximum Salary: {0}", maxSalary);
+            Console.WriteLine($"Maximum Salary: {maxSalary}");
         }
         public void MaxMethodWithCollection()
         {
@@ -55,7 +55,7 @@ namespace Linqer.Clauses
         public void SumMethod()
         {
             var sumOfSalary = Employees.Sum(m => m.Salary);
-            Console.WriteLine("Total Salary in a month: {0}", sumOfSalary);
+            Console.WriteLine($"Total Salary in a month: {sumOfSalary}");
         }
     }
 }

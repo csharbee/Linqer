@@ -31,7 +31,7 @@ namespace Linqer.Clauses
 
             foreach (var employee in employees)
             {
-                Console.WriteLine("Employee Name: {0}, Salary: {1}", employee.Name, employee.Salary);
+                Console.WriteLine($"Employee Name: {employee.Name}, Salary: {employee.Salary}");
             }
         }
 
@@ -44,7 +44,7 @@ namespace Linqer.Clauses
 
             foreach (var employee in employees)
             {
-                Console.WriteLine("Employee Name: {0}, Salary: {1}", employee.Name, employee.Salary);
+                Console.WriteLine($"Employee Name: {employee.Name}, Salary: {employee.Salary}");
             }
         }
 
@@ -66,7 +66,7 @@ namespace Linqer.Clauses
 
             foreach (var employee in employees)
             {
-                Console.WriteLine("Employee Name: {0}, Salary: {1}", employee.Name, employee.Salary);
+                Console.WriteLine($"Employee Name: {employee.Name}, Salary: {employee.Salary}");
             }
         }
 
@@ -76,7 +76,7 @@ namespace Linqer.Clauses
                                         select em;
             foreach (var employee in empleyeesInMixedArray)
             {
-                Console.WriteLine("Name: {0}, Salary: {1}", employee.Name, employee.Salary);
+                Console.WriteLine($"Name: {employee.Name}, Salary: {employee.Salary}");
             }
         }
     }
