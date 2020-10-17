@@ -40,5 +40,15 @@ namespace Linqer.Clauses
                 Console.WriteLine($"Employee Name: {employee.Name}");
             }
         }
+        public void LastMethod()
+        {
+            var employee = Employees.Last(m => m.Salary > 4000);  //Returns the last element of a collection, or the last element that satisfies a condition 
+            Console.WriteLine($"Employee Name: {employee.Name}");
+        }
+        public void LastOrDefaultMethod()
+        {
+            var employee = Employees.Last(m => m.Salary > 4000);  // Returns the last element of a collection, or the last element that satisfies a condition. Returns a default value if no such element exists. 
+            Console.WriteLine($"Employee Name: {employee.Name}");
+        }
     }
 }

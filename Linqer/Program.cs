@@ -63,6 +63,8 @@ namespace Linqer
             elementOprClause.ElementOrDefaultAtMethod();        // 29- Returns the element at a specified index in a collection or a default value if the index is out of range.
             elementOprClause.FirstMethod();                     // 30- Returns the first element of a collection, or the first element that satisfies a condition.
             elementOprClause.FirstOrDefaultMethod();            // 31- Returns the first element of a collection, or the first element that satisfies a condition. Returns a default value if index is out of range. 
+            elementOprClause.LastMethod();
+            elementOprClause.LastOrDefaultMethod();
         }
     }
 }
