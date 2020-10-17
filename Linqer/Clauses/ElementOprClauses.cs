@@ -19,6 +19,7 @@ namespace Linqer.Clauses
             var secondIndexedEmployee = Employees.ElementAt(1); // As you know, index numbers begin 0
             Console.WriteLine($"Second Indexed Employee Name: {secondIndexedEmployee.Name}, Salary: {secondIndexedEmployee.Salary}");
         }
+
         public void ElementOrDefaultAtMethod()
         {
             var employee = Employees.ElementAtOrDefault(40); // There is no element indexed with 40. So if you use ElementAt method, you will encounter runtime error.
@@ -27,11 +28,13 @@ namespace Linqer.Clauses
                 Console.WriteLine($"Employee: {employee.Name}");
             }
         }
+
         public void FirstMethod()
         {
             var employee = Employees.First(m => m.Salary > 3000); // return first item in collection that satisfies the condition. If there is not any item, you will encounter run time error. 
             Console.WriteLine($"Employee Name: {employee.Name}");
         }
+
         public void FirstOrDefaultMethod()
         {
             var employee = Employees.FirstOrDefault(m => m.Salary > 3000); // return first item in collection that satisfies the collection or if there is not any item return null
@@ -40,15 +43,33 @@ namespace Linqer.Clauses
                 Console.WriteLine($"Employee Name: {employee.Name}");
             }
         }
+
         public void LastMethod()
         {
             var employee = Employees.Last(m => m.Salary > 4000);  //Returns the last element of a collection, or the last element that satisfies a condition 
             Console.WriteLine($"Employee Name: {employee.Name}");
         }
+
         public void LastOrDefaultMethod()
         {
             var employee = Employees.Last(m => m.Salary > 4000);  // Returns the last element of a collection, or the last element that satisfies a condition. Returns a default value if no such element exists. 
             Console.WriteLine($"Employee Name: {employee.Name}");
         }
+
+        public void SingleMethod()
+        {
+            var employee = Employees.Single(m => m.Salary > 7000);  // Returns the only element of a collection, or the only element that satisfies a condition.  
+                                                                    // If there is more than one elements that satisfies a condition, you will encounter runtime error
+            Console.WriteLine("Employee Name: {0}", employee.Name); // This is difference from First method. First method gets one element, if there is more than one elements
+        }
+
+
+        public void SingleOrDefaultMethod()
+        {
+            var employee = Employees.SingleOrDefault(m => m.Salary > 5000);  // Returns the only element of a collection, or the only element that satisfies a condition.  
+                                                                             // If there is more than one elements that satisfies a condition, you will encounter runtime error
+            Console.WriteLine("Employee Name: {0}", employee.Name);         // This is difference from FirstOrDefault method. FirstOrDefault method gets one element, if there is more than one elements
+        }
+
     }
 }
