@@ -24,7 +24,7 @@ namespace Linqer.Clauses
                                   select new { Name = em.Name, EmployeeTypeName = et.Name };
             foreach (var employee in employeesDetail)
             {
-                Console.WriteLine("Employee Name: {0}, Employee Type Name: {1}", employee.Name, employee.EmployeeTypeName);
+                Console.WriteLine($"Employee Name: {employee.Name}, Employee Type Name: {employee.EmployeeTypeName}");
             }
         }
         public void JoinInMethodSyntax()
@@ -41,7 +41,7 @@ namespace Linqer.Clauses
                                     );
             foreach (var employee in employeesDetail)
             {
-                Console.WriteLine("Employee Name: {0}, Employee Type Name: {1}", employee.Name, employee.EmployeeTypeName);
+                Console.WriteLine($"Employee Name: {employee.Name}, Employee Type Name: {employee.EmployeeTypeName}");
             }
         }
 

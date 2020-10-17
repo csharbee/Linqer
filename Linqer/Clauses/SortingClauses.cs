@@ -22,7 +22,7 @@ namespace Linqer.Clauses
                                    select em;
             foreach (var employee in employeesInOrder)
             {
-                Console.WriteLine("Employee Name: {0}, Salary: {1}", employee.Name, employee.Salary);
+                Console.WriteLine($"Employee Name: {employee.Name}, Salary: {employee.Salary}");
             }
         }
         public void OrderByInMethodSynax()
@@ -31,7 +31,7 @@ namespace Linqer.Clauses
 
             foreach (var employee in employeesInOrder)
             {
-                Console.WriteLine("Employee Name: {0}, Salary: {1}", employee.Name, employee.Salary);
+                Console.WriteLine($"Employee Name: {employee.Name}, Salary: {employee.Salary}");
             }
         }
         public void OrderByDescendingInQuerySynax()
@@ -41,7 +41,7 @@ namespace Linqer.Clauses
                                    select em;
             foreach (var employee in employeesInOrder)
             {
-                Console.WriteLine("Employee Name: {0}, Salary: {1}", employee.Name, employee.Salary);
+                Console.WriteLine($"Employee Name: {employee.Name}, Salary: {employee.Salary}");
             }
         }
         public void OrderByDescendingInMethodSynax()
@@ -50,7 +50,7 @@ namespace Linqer.Clauses
 
             foreach (var employee in employeesInOrder)
             {
-                Console.WriteLine("Employee Name: {0}, Salary: {1}", employee.Name, employee.Salary);
+                Console.WriteLine($"Employee Name: {employee.Name}, Salary: {employee.Salary}");
             }
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Linqer.Clauses
 
             foreach (var employee in employeesInOrder)
             {
-                Console.WriteLine("Employee Name: {0}, Salary: {1}", employee.Name, employee.Salary);
+                Console.WriteLine($"Employee Name: {employee.Name}, Salary: {employee.Salary}");
             }
         }
         public void ThenByDescendingInMethodSynax()
@@ -71,7 +71,7 @@ namespace Linqer.Clauses
 
             foreach (var employee in employeesInOrder)
             {
-                Console.WriteLine("Employee Name: {0}, Salary: {1}", employee.Name, employee.Salary);
+                Console.WriteLine($"Employee Name: {employee.Name}, Salary: {employee.Salary}");
             }
         }
     }

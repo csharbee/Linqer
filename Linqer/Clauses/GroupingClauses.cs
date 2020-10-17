@@ -37,10 +37,10 @@ namespace Linqer.Clauses
             foreach (var group in groups)
             {
                 var counter = 0;
-                Console.WriteLine("Group Key: {0}", group.Key);
+                Console.WriteLine($"Group Key: {group.Key}");
                 foreach (var employee in group)
                 {
-                    Console.WriteLine("{0}. Employee Name: {1}, Salary: {2}", counter + 1, employee.Name, employee.Salary);
+                    Console.WriteLine($"{counter + 1}. Employee Name: {employee.Name}, Salary: {employee.Salary}");
                 }
                 Console.WriteLine("*********************");
             }
@@ -54,10 +54,10 @@ namespace Linqer.Clauses
             foreach (var group in groups)
             {
                 var counter = 0;
-                Console.WriteLine("Group Key: {0}", group.Key);
+                Console.WriteLine($"Group Key: {group.Key}");
                 foreach (var employee in group)
                 {
-                    Console.WriteLine("{0}. Employee Name: {1}, Salary: {2}", counter + 1, employee.Name, employee.Salary);
+                    Console.WriteLine($"{counter + 1}. Employee Name: {employee.Name}, Salary: {employee.Salary}");
                 }
                 Console.WriteLine("*********************");
             }

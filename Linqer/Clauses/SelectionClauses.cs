@@ -21,7 +21,7 @@ namespace Linqer.Clauses
                                             select new { EmployeeName = em.Name, AnnualSalary = em.Salary * 12 };
             foreach (var employee in employeesWithAnnualSalary)
             {
-                Console.WriteLine("Employee Name: {0}, Annual Salary: {1}", employee.EmployeeName, employee.AnnualSalary);
+                Console.WriteLine($"Employee Name: {employee.EmployeeName}, Annual Salary: {employee.AnnualSalary}");
             }
         }
         public void SelectAnonymousTypeInMethodSyntax()
@@ -30,7 +30,7 @@ namespace Linqer.Clauses
 
             foreach (var employee in employeesWithAnnualSalary)
             {
-                Console.WriteLine("Employee Name: {0}, Annual Salary: {1}", employee.EmployeeName, employee.AnnualSalary);
+                Console.WriteLine($"Employee Name: {employee.EmployeeName}, Annual Salary: {employee.AnnualSalary}");
             }
         }
         public void SelectCollectionTypeInMethodSyntax()
@@ -44,7 +44,7 @@ namespace Linqer.Clauses
 
             foreach (var employee in employeesWithAnnualSalary)
             {
-                Console.WriteLine("Employee Name: {0}, New Salary: {1}", employee.Name, employee.Salary);
+                Console.WriteLine($"Employee Name: {employee.Name}, New Salary: {employee.Salary}");
             }
         }
 
