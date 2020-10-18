@@ -58,6 +58,7 @@ namespace Linqer
             aggreageClause.MaxMethodWithCollection();           // 26- Max method with a collection object that in IComparable implemented collection
             aggreageClause.SumMethod();                         // 27- Calculate the sum of selected numerical value in the collection
 
+            //// ElementOperation Methods
             var elementOprClause = new ElementOprClauses();
             elementOprClause.ElementAtMethod();                 // 28- Returns the element at a specified index in a collection
             elementOprClause.ElementOrDefaultAtMethod();        // 29- Returns the element at a specified index in a collection or a default value if the index is out of range.
@@ -67,6 +68,10 @@ namespace Linqer
             elementOprClause.LastOrDefaultMethod();             // 33- Returns the last element of a collection, or the last element that satisfies a condition. Returns a default value if no such element exists. 
             elementOprClause.SingleMethod();                    // 34- Returns the only element of a collection, or the only element that satisfies a condition. 
             elementOprClause.SingleOrDefaultMethod();           // 35- Returns the only element of a collection, or the only element that satisfies a condition. Returns a default value if no such element exists or the collection does not contain exactly one element. 
+
+            //// Equality Methods
+            var equalityClause = new EqualityClause();
+            equalityClause.SequenceEqual();
 
         }
     }
