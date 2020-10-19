@@ -72,6 +72,7 @@ namespace Linqer
             //// Equality Methods
             var equalityClause = new EqualityClause();
             equalityClause.SequenceEqual();
+            equalityClause.SequenceEqualForReferenceTypes();
 
         }
     }
