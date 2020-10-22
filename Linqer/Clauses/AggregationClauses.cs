@@ -57,5 +57,22 @@ namespace Linqer.Clauses
             var sumOfSalary = Employees.Sum(m => m.Salary);
             Console.WriteLine($"Total Salary in a month: {sumOfSalary}");
         }
+        public void ZipMethod()
+        {
+            var salaries = Employees.Select(m => m.Salary);
+            var updatedSalaries = UpdateSalary(salaries);
+
+            var zipList = salaries.Zip(updatedSalaries, (oldSalary, newSalary) => (oldSalary, newSalary));
+
+            foreach (var item in zipList)
+            {
+                Console.WriteLine($"Old Salary: {item.oldSalary} -> New Salary: {item.newSalary}");
+            }
+
+        }
+        private IEnumerable<int> UpdateSalary(IEnumerable<int> salaries)
+        {
+            return salaries.Select(m => m = m + (m * 2) / 10);
+        }
     }
 }
