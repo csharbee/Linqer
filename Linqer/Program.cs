@@ -80,6 +80,7 @@ namespace Linqer
             //concatClause.ConcatMethod();
             var misc = new Misc();
             misc.DefaultIfEmptyMethod();
+            misc.EmptyMethod();
         }
     }
 }

@@ -14,5 +14,10 @@ namespace Linqer.Clauses
             var listOfEmployee = emp.DefaultIfEmpty();
             Console.WriteLine($"Employee List Count: {listOfEmployee.Count()}");
         }
+        public void EmptyMethod()
+        {
+            var employee = Enumerable.Empty<Employee>();
+            Console.WriteLine($"Employee Count: {employee.Count()}");
+        }
     }
 }
